@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1> Calcular </h1>
+
+	<table>
+		<tr>
+			<td>Producto</td>
+			<td>Precio</td>
+			<td>Cantidad</td>
+			<td>SubTotal</td>
+		</tr>
+		<tr>
+			<td>Camisa</td>
+			<td><input type="text" name="Precio" id="p1" value="3000"></td>
+			<td><input type="text" name="Cantidad" id="c1" value="" onchange="evento_onchange(1)"></td>
+			<td><input type="text" name="SubTotal" id="s1" value=""></td>
+		</tr>
+		<tr>
+			<td>Gorra</td>
+			<td><input type="text" name="Precio" id="p2" value="5000"></td>
+			<td><input type="text" name="Cantidad" id="c2" value="" onchange="evento_onchange(2)"></td>
+			<td><input type="text" name="SubTotal" id="s2" value=""></td>
+		</tr>
+		<tr>
+			<td>Zapatos</td>
+			<td><input type="text" name="Precio" id="p3" value="6000"></td>
+			<td><input type="text" name="Cantidad" id="c3" value="" onchange="evento_onchange(3)"></td>
+			<td><input type="text" name="SubTotal" id="s3" value=""></td>
+		</tr>
+		<tr>
+			<td>Pantalon</td>
+			<td><input type="text" name="Precio" id="p4" value="8000"></td>
+			<td><input type="text" name="Cantidad" id="c4" value="" onchange="evento_onchange(4)"></td>
+			<td><input type="text" name="SubTotal" id="s4" value=""></td>
+		</tr>
+		<tr>			
+			<td><button onclick="sumartotal()">Total</button></td>
+			<td><button>Borrar datos</button></td>
+			<td></td>
+			<td><label id="total" ></label></td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+
+
+	var a = document.getElementsByName("Precio");
+	for(var i = 1;i<=a.length;i++){
+
+		document.getElementById("p"+i).disabled="false";
+
+	}
+
+	var b = document.getElementsByName("SubTotal");
+	for(var i= 1;i<=b.length;i++){
+		document.getElementById("s"+i).disabled="false";
+	}
+
+
+	function evento_onchange(e){
+
+		var a = document.getElementById("p"+e).value;
+		var b = document.getElementById("c"+e).value;
+		
+		try{
+			
+			var resultado = Number(a) * Number(b);
+			if(isNaN(resultado)){
+				throw("Solo se permite numero")
+			}
+			document.getElementById("s"+e).value=resultado;		
+
+			sumartotal();					
+		}catch(error){
+			alert(error);
+			document.getElementById("c"+e).value=0;	
+			document.getElementById("s"+e).value=0;	
+			sumartotal();
+		}
+	}
+
+
+	function sumartotal(){
+		var a = document.getElementsByName("SubTotal");
+		var subtotal = 0;
+		for(var i=1;i<=a.length;i++){
+			subtotal += +Number(document.getElementById("s"+i).value);
+		}
+		document.getElementById("total").innerHTML=subtotal;
+		
+
+	}
+
+
+	
+
+	console.log(a);
+</script>
+</html>

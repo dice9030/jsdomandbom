@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		
+		function removerelemento(){
+			var miDiv = document.getElementById("miDiv");
+			miDiv.removeChild(miDiv.childNodes[0]);
+		}
+
+
+	</script>
+</head>
+<body>
+
+<div id="miDiv"><h1>Mi texto</h1><h1>Mi texto2</h1><h1>Mi texto3</h1></div>
+
+
+	<button onclick="removerelemento()">Remover Encabezado</button>
+
+</body>
+</html>
