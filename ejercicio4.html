@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript">
+
+	function createnode(){
+		var d = document.createElement("h4");
+		var texto = document.createTextNode("alumno Restristrado");
+		d.appendChild(texto);
+		document.body.appendChild(texto);
+	}
+	function titulo(){
+		var a = document.getElementById("titulo");
+		a.innerHTML = "Registro de Docentes";
+	}
+	function cambiarcolor(){
+		var b = document.getElementsByTagName("th");
+		for (var i = 0;i<b.length;i++) {
+			b[i].style.color="red";
+		}
+	}
+
+	function estilos(){
+		var c = document.getElementsByClassName("n1");
+		//var style = {"padding":"12px","background":"#009688","border":"none","color":"#fff"}
+		for(var i = 0;i<c.length;i++){
+			c[i].style.background="#2196f3";
+			c[i].style.padding="12px";
+			c[i].style.border="none";
+			c[i].style.color="#fff";
+		}
+	}
+	function estilosclick(e){
+		//var c = document.getElementsByClassName("n1");
+		//var style = {"padding":"12px","background":"#009688","border":"none","color":"#fff"}
+		e.style.background="#673ab7";
+	}
+
+	function estilohover(e){
+		//var d = document.getElementById(e);
+		//e.setAttribute("background","red");
+
+		var d = document.getElementsByClassName("n1");
+		for (var i = 0;i<d.length;i++) {
+			d[i].style.background="#2196f3";
+		}	
+		e.style.background="#673ab7";
+		//console.log(e);
+	}
+
+
+	function stylemouse(){
+		var d = document.getElementsByClassName("n1");
+		for (var i = 0;i<d.length;i++) {
+			d[i].style.background="#2196f3";
+		}	
+	}
+
+
+
+
+</script>
+</head>
+<body>
+
+<h1 id="titulo">Registro de Estudiante</h1>
+
+	<table>
+		<form name="miform" method="post" action="">
+		<tr>
+			<th>Nombre</th>
+			<td><input value="" type="text" name="nombre" id="nomre" class="miclase"></td>
+		</tr>
+		<tr>
+			<th>Apellido</th>
+			<td><input value="" type="text" name="nombre" id="nomre" class="miclase"></td>
+		</tr>
+		<tr>
+			<th>Dirección</th>
+			<td><input value="" type="text" name="nombre" id="nomre" class="miclase"></td>
+		</tr>
+		<tr>
+			<th>Edad</th>
+			<td><input value="" type="text" name="nombre" id="nomre" class="miclase"></td>
+		</tr>
+		<tr>
+			<th>Fecha de Nacimiento</th>
+			<td><input value="" type="date" name="nombre" id="nomre" class="miclase"></td>
+		</tr>
+		<tr>
+			<th>Lugar de Nacimiento</th>
+			<td><input value="" type="text" name="nombre" id="nomre" class="miclase"></td>
+		</tr>
+		<tr>
+			<th>Estado Civil</th>
+			<td><input value="" type="text" name="nombre" id="nomre" class="miclase"></td>
+		</tr>	
+		</form>
+		<tr>			
+			<td><button onmouseover="estilohover(this)" onmouseout="stylemouse()" onclick="createnode();estilosclick(this);" class="n1" id="r1">Registro Alumno</button></td>
+			<td><button onmouseover="estilohover(this)" onmouseout="stylemouse()" onclick="titulo();estilosclick(this);" class="n1" id="r2">Cambiar Titulo</button></td>			
+			<td><button onmouseover="estilohover(this)" onmouseout="stylemouse()" onclick="cambiarcolor();estilosclick(this)" class="n1" id="r3">Cambiar Color</button></td>
+		</tr>			
+	</table>
+
+
+</body>
+
+<script type="text/javascript">
+	estilos();
+</script>
+</html>

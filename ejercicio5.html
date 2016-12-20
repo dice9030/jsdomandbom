@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		
+	function cambioletra(){
+		document.getElementById("n1").style.fontFamily="Courier New";
+		document.getElementById("n2").style.fontFamily="Verdana";
+	}
+
+	function cambiocolor(){
+		document.getElementById("n1").style.background="yellow";
+		document.getElementById("n2").style.background="blue";
+	}
+
+
+	function cambiostyle(){
+	 	var a = document.getElementById("miDiv");
+	 	a.style.background="blue";
+	 	a.style.color="yellow";
+	 	a.style.width="500px";
+	 	a.style.fontSize ="xx-large";
+	}
+
+
+	function tabla(){
+		var datos = '{"jugador":['+
+						'{"nombre":"James Rodriguez","goles":"6"},'+
+						'{"nombre":"Thomas Mueller","goles":"5"},'+
+						'{"nombre":"Neymar","goles":"4"},'+
+						'{"nombre":"Lionel Messi","goles":"4"}'
+					+']}';
+		var jsdata = JSON.parse(datos);
+		var out="<table>";
+		out+="<tr id=n3>";
+		out+="<td>Nombre</td>";
+		out+="<td>Goles</td>";
+		out+="</tr>";
+		for(var i = 0; i<jsdata.jugador.length;i++){
+			out += "<tr id=nn"+i+">";
+			out += "<td>"+jsdata.jugador[i].nombre+"</td>";
+			out += "<td>"+jsdata.jugador[i].goles+"</td>";
+			out += "</tr>";
+		}		
+		out+="</table>";
+
+		document.getElementById("tabla").innerHTML=out;
+	}
+
+	function cambiartabla(){
+
+		document.getElementById("n3").style.background="red"		
+		document.getElementById("nn0").style.backgroundColor="blue"
+		document.getElementById("nn0").style.fontStyle ="italic"
+		document.getElementById("nn0").style.fontWeight  ="bold"
+
+		document.getElementById("nn1").style.backgroundColor="blue"
+		document.getElementById("nn1").style.fontStyle ="italic"
+		document.getElementById("nn1").style.fontWeight  ="bold"
+
+		document.getElementById("nn2").style.backgroundColor="blue"
+		document.getElementById("nn2").style.fontStyle ="italic"
+		document.getElementById("nn2").style.fontWeight  ="bold"
+
+		document.getElementById("nn3").style.backgroundColor="blue"
+		document.getElementById("nn3").style.fontStyle ="italic"
+		document.getElementById("nn3").style.fontWeight  ="bold"
+
+
+
+	}
+
+	function estiloact(){
+		document.getElementById("d1").style.background="blue"		
+		document.getElementById("d1").style.color="yellow"
+		document.getElementById("d1").style.width ="200px"
+		document.getElementById("d1").style.height  ="80px"
+
+		document.getElementById("dv2").style.background="orange"		
+		document.getElementById("dv2").style.color="white"
+		document.getElementById("dv2").style.width ="800px"
+		document.getElementById("dv2").style.height  ="800px"
+		document.getElementById("dv2").style.fontSize  ="x-large"
+
+		document.getElementById("texto1").style.backgroundColor="green"
+		document.getElementById("texto1").style.color="red"
+		document.getElementById("texto1").style.fontSize  ="x-large"
+		document.getElementById("texto1").innerHTML="Cambio de parrafo"
+	}
+
+
+
+
+
+	</script>
+</head>
+<body>
+<p id="n1">Mi primer texto!</p>
+<p id="n2">Mi segundo texto!</p>
+
+<div id="miDiv">Mi div !!!</div>
+
+<div id="tabla"></div>
+
+
+<input type="text" name="nombre" id="d1">
+<div id="dv2"></div>
+<label id="texto1">Hola 1</label>
+
+<button onclick="cambioletra()">boton 1</button>
+<button onclick="cambiocolor()">boton 2</button>
+<button onclick="cambiostyle()">boton 3</button>
+<button onclick="cambiartabla()">boton 4</button>
+<button onclick="estiloact()">boton 5</button>
+</body>
+<script type="text/javascript">
+	tabla();
+</script>
+</html>
