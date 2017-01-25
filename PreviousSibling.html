@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+		function nodehermanoanterior(){
+			var texto = "";
+
+			var parrafo = document.getElementById("p1");
+			var mensaje = document.getElementById("mensaje");
+
+			mensaje.innerHTML = "Anterior nodo hermano del elemento:" + parrafo.previousSibling.nodeName;
+
+		}
+	</script>
+</head>
+<body>
+<div id="midiv"><h1>h1Encanezado 1</h1><p id="p1">Parrafo 1</p><input type="text"></div>
+<br>
+
+<button onclick="nodehermanoanterior()">Nodo Anterior Hermano</button>
+<p id="mensaje"></p>
+</body>
+</html>

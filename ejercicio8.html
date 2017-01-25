@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="midiv">Hola mundo</h1>
+<button id="boton1" >Cambiar Mensaje</button>
+
+
+<div id="cuadro">Mi div!!!</div>
+<button id="boton2" >Cambiar Mensaje</button>
+
+
+
+
+
+<input id="miInput" type="text" name="nombre" value="hola">
+<button id="boton4" >Cambiar input</button>
+
+
+<script type="text/javascript">
+	var elemento = document.getElementById("midiv");
+	var elemento1 = document.getElementById("boton1");			  
+	elemento1.addEventListener("click",function(){
+		elemento.innerHTML = "Nuevo Mundo";
+	});
+
+
+/*******/
+
+	var elemento2 = document.getElementById("cuadro");
+	var elemento3 = document.getElementById("boton2");
+
+	elemento3.addEventListener("click",function(){
+	
+		elemento2.style.backgroundColor ="green";
+		elemento2.style.fontSize  ="xx-large";
+		elemento2.style.width   ="400px";
+		elemento2.style.height    ="400px";
+
+	});
+
+//////////////
+	var elemento4 = document.getElementById("miInput");
+	var elemento5 = document.getElementById("boton4");
+
+	elemento5.addEventListener("click",mifuncion3);
+	elemento5.addEventListener("click",mifuncion4);
+
+	function mifuncion3(){
+		elemento4.style.width   ="150px";
+		elemento4.style.height    ="50px";
+	}
+	function mifuncion4(){
+		elemento4.style.backgroundColor ="blue";
+		elemento4.style.color  ="orange";
+	}
+
+
+</script>
+</body>
+</html>

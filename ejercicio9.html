@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function vernodos(){
+
+			var nelmen = "";
+			var elementos = document.getElementsByTagName("div")[1];
+			var mensaje = document.getElementById("mensaje");		
+			for (var i =0; i < elementos.childNodes.length ; i++) {	{ // recorremos el arreglo de nodos hijos que nos devuelve la propiedad childNodes del elemento div			
+				nelmen += elementos.childNodes[i].nodeName+"<br>";	// concatenamos el  nombre de los nodos hijos a la variable texto.   					   
+			}
+			mensaje.innerHTML=nelmen;// cambiamos el html del parrafo con id mensaje con el String texto
+		}
+
+		function primernodo(){
+
+			var elemento = document.getElementById("midiv");
+			var mensaje = document.getElementById("mensaje");
+
+			mensaje.innerHTML = "Mi primer elemento es: "+elemento.firstChild.nodeName;;// Se utiliza la propiedad firstChild del div para obtener el primer nodo hijo con su respectivo nombre para mostrar el elemento p con id mensaje.
+		}
+
+		function ultimonodo(){
+			var elemento = document.getElementById("midiv");
+			var mensaje = document.getElementById("mensaje");
+
+			mensaje.innerHTML="El ultimo elemento es: "+ elemento.lastChild.nodeName;;// Se utiliza la propiedad lastChild del div para obtener el ultimo nodo hijo con su respectivo nombre para mostrarlo en el elemento p con id mensaje.
+
+		}
+
+	</script>
+</head>
+<body>
+	<div>
+		<h1 id="texto1">Primer Texto</h1>
+		<p id="texto2">Segundo Texto</p>
+	</div>
+
+	<div id=midiv><h1>Elmentos</h1><p>Nombre</p><input type="text"></div>
+
+	<button onclick="vernodos()">Ver tipo de mensaje</button>
+	<button onclick="primernodo()">Primero Elemento</button>
+	<button onclick="ultimonodo()">Ultimo Elemento</button>
+
+	<div id="mensaje"></div>
+	<script>		
+		var reemplazar = document.getElementById("texto1").childNodes[0].nodeValue;
+		document.getElementById("texto2").innerHTML=reemplazar;		
+	</script>
+</body>
+</html>

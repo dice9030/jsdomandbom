@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="boton1">Mensaje del boton</button>
+<script type="text/javascript">
+	var nombre = "Juan Perez";
+	var estatura = 1.74;
+
+	document.getElementById("boton1").addEventListener("click",function(){
+		saludar(nombre,estatura);
+	})
+
+	function saludar(nombre,estatura){
+		alert("Hola "+ nombre +", tu estatura es: " +estatura);
+	}
+</script>
+</body>
+</html>

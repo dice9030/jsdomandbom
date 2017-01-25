@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+		function nodohijos(){
+			var texto="";
+			var div = document.getElementsByTagName("div")[0];
+			for (var i = 0; i < div.childNodes.length; i++) {
+				texto += div.childNodes[i].nodeName+"<br>";
+			}
+			document.getElementById("mensaje").innerHTML=texto;
+		}
+	</script>
+</head>
+<body>
+<div><p>Parrafo 1</p><p>Parrafo 2</p><p>Parrafo 3</p><p>Parrafo 4</p></div>
+
+<button onclick="nodohijos()">Nodos Hijos</button>
+	<p id="mensaje"></p>
+
+</body>
+</html>
