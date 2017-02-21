@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="verInfoPantalla()">Info Pantalla</button>
+
+    <p id="infoPantalla"></p>
+
+    <script>
+    function verInfoPantalla() {
+
+        var info = "";
+        info += 'INFORMACION DE PANTALLA<br>';
+        info += 'Alto Pemitido :' + screen.availHeight + '<br>';
+        info += 'Ancho Pemitido :' + screen.availWidth + '<br>';
+        info += 'Altura total :' + screen.height + '<br>';
+        info += 'Ancho Total :' + screen.width + '<br>';
+        info += 'Numeros bits de colores :' + screen.colorDepth + '<br>';
+
+        document.getElementById("infoPantalla").innerHTML = info;
+
+    }
+
+    </script>
+</body>
+</html>

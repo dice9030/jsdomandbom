@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>Mi 1 elemento div</div>
+<div>Mi 2 elemento div</div>
+<div>Mi 3 elemento div</div>
+<div>Mi 4 elemento div</div>
+
+<button onclick="Cambiarcolor()" >Cambiar Divs</button>
+
+
+<script>
+	
+function Cambiarcolor(){
+	var listadoNodos = document.getElementsByTagName("div");
+
+	for (var i = 0 ; i < listadoNodos.length; i++) {
+
+		listadoNodos[i].style.backgroundColor="green";
+	}
+}
+
+</script>
+</body>
+</html>

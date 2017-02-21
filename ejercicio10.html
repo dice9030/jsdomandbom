@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script>
+		function adicionarnodo(){
+			var parrafo = document.createElement("p");
+			var texto = document.createTextNode("Parrafo html");
+			parrafo.appendChild(texto);
+			document.body.appendChild(parrafo);
+		}
+
+		function eliminarnodo1(){
+			var padre = document.getElementById("cuadro");
+			var hijo = document.getElementById("e3");
+
+			padre.removeChild(hijo);
+		}
+
+		function eliminarnodo2(){
+			var hijo = document.getElementById("e2");
+			hijo.parentNode.removeChild(hijo);
+		}
+	</script>
+</head>
+<body>
+
+
+<div id="cuadro">
+	<p id="e1">Texto 1</p>
+	<p id="e2">Texto 2</p>
+	<p id="e3">Texto 3</p>
+	<p id="e4">Texto 4</p>
+</div>
+
+<button onclick="adicionarnodo()">Adicionar texto</button>
+<button onclick="eliminarnodo1()">eliminar 1 texto</button>
+<button onclick="eliminarnodo2()">eliminar 2 texto</button>
+</body>
+</html>

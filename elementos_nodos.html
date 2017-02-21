@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Mi primer elemento h1</h1>
+<H1>Mi segundo elemento H1</H1>
+<input type="text" name="txt1" value="Mi Primer Input">
+<input type="text" name="txt2" value="Mi Segundo Input">
+
+<div>Mi primer elemento div</div>
+<div>Mi segundo elemento div</div>
+
+<button onclick="NumeroDeEncabezado()">Numero de encabezado</button>
+<button onclick="NumeroDeInputs()">Numero de Parrafos</button>
+<button onclick="NumeroDeDivs()">Numero de Divs</button>
+<button onclick="CambiarEncabezados()">Cambiar Encabezados</button>
+<button onclick="CambiarInputs()">Cambiar Inputs</button>
+<button onclick="CambiarDivs()">Cambiar Divs</button>
+
+<script type="text/javascript">
+	
+function NumeroDeEncabezado(){
+	var listaencabezados = document.getElementsByTagName("h1");
+	var NumeroDeEncabezado = listaencabezados.length;
+	alert(NumeroDeEncabezado);
+}
+
+function NumeroDeInputs(){
+	var listainputs = document.getElementsByTagName("input");
+	var NumeroDeInputs = listainputs.length;
+	alert(NumeroDeInputs);
+}
+
+function NumeroDeDivs(){
+	var listadivs = document.getElementsByTagName("div");
+	var NumeroDeDivs = listadivs.length;
+	alert(NumeroDeDivs);
+}
+
+function CambiarEncabezados(){
+	document.getElementsByTagName("h1")[0].style.backgroundColor="red";
+	document.getElementsByTagName("h1")[0].style.fontSize="x-large";
+	document.getElementsByTagName("h1")[1].style.backgroundColor="blue";
+	document.getElementsByTagName("h1")[1].style.fontSize="xxx-large";
+}
+
+function CambiarInputs(){
+	document.getElementsByTagName("input")[0].style.color="green";
+	document.getElementsByTagName("input")[1].style.fontFamily="verdana";
+	document.getElementsByTagName("input")[1].style.color="red";
+	document.getElementsByTagName("input")[1].style.fontFamily="Georgia";
+}
+
+function CambiarDivs(){
+	document.getElementsByTagName("div")[0].style.backgroundColor="yellow";
+	document.getElementsByTagName("div")[0].style.width="300px";
+	document.getElementsByTagName("div")[0].style.height="300px";
+	document.getElementsByTagName("div")[1].style.backgroundColor="purple";
+	document.getElementsByTagName("div")[1].style.width="700px";
+	document.getElementsByTagName("div")[1].style.height="700px";
+}
+</script>
+
+</body>
+</html>

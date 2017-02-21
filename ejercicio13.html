@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button onclick="abrirVentana()">Abrir Ventana</button>
+    <button onclick="cambiarDimVentana()">Cambiar dimension Ventana</button>
+
+    <script>
+    var ventana1;
+
+    function abrirVentana() {
+        ventana1 = window.open("", "_blank", "width=300, height=300");
+
+    }
+
+    function cambiarDimVentana() {
+        ventana1.resizeTo(600, 600);
+        ventana1.focus();
+
+    }
+
+
+    </script>
+</body>
+</html>
