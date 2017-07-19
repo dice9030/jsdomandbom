@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="navegador()">
+<p id="mensaje"></p>
+<script type="text/javascript">
+	function navegador(){
+		document.getElementById("mensaje").innerHTML="Nombre: " + navigator.appName + "<br> version: " + navigator.appVersion + "<br> Lenguaje: " + navigator.language + "<br> Navegador esta en linea: " + navigator.online + "<br> Java esta habilitado: " + navigator.javaEnabled();
+	}
+</script>
+</body>
+</html>

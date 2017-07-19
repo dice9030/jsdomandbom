@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+</head>
+<body onload="confirmar()">
+<h1>Información suministrada</h1>
+<p id="mensaje"></p>
+
+<script>
+	function confirmar(){
+		if(confirm("Permite realizar una seria de preguntas?")==true){
+			preguntas();
+		}else{
+
+		}
+	}
+
+	function preguntas(){
+		var nombre = prompt("cual es su nombre");
+		var apellido = prompt("cuales son apellido");
+		var edad = prompt("Que edad tiene?");
+		var ciudad = prompt("cual es su ciudad");
+		var residencia = prompt("cual es su residencia");
+		var estado = prompt("cual es su estado civil");
+		var profesion = prompt("cual es su profesion");
+		var universidad = prompt("cual es su universidad");
+		if(nombre != null){
+			document.getElementById("mensaje").innerHTML= "Ud es "+nombre+" "+apellido+" Tiene la edad de "+edad+" y es de "+ciudad;
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="mostrarpropiedad()">Mostrar Propiedades</button>
+<p id="mensaje"></p>
+</body>
+
+
+<script type="text/javascript">
+	function mostrarpropiedad(){
+		var mensaje="";
+		mensaje+="<b>Cookies Habilitadas: </b>"+navigator.cookieEnabled+"<br>";
+		mensaje+="<b>PLataforma: </b>"+navigator.platform+"<br>";
+		mensaje+="<b>El motor del navegador: </b>"+navigator.product+"<br>";
+		mensaje+="<b>Tipos MIME soportados: </b>"+"<br>";
+
+		for(var i= 0 ; i<navigator.mimeTypes.length;i++){
+			mensaje+="- "+navigator.mimeTypes[i].type+"<br>";
+		}
+		mensaje+="<b>Plugins: </b>"+"<br>";
+		for(var i= 0 ; i<navigator.plugins.length;i++){
+			mensaje+="- "+navigator.plugins[i].name+"<br>";
+		}
+
+		document.getElementById("mensaje").innerHTML=mensaje;
+
+
+	}
+</script>
+</html>
